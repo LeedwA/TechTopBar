@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.example.cwgj.sofia;
+package com.example.cwgj.library;
 
 import android.content.Context;
 import android.os.Build;
@@ -23,24 +23,24 @@ import android.view.View;
 /**
  * Created by YanZhenjie on 2017/8/1.
  */
-public class NavigationView extends MeasureView {
+public class StatusView extends MeasureView {
 
-    public NavigationView(Context context) {
+    public StatusView(Context context) {
         this(context, null, 0);
     }
 
-    public NavigationView(Context context, AttributeSet attrs) {
+    public StatusView(Context context, AttributeSet attrs) {
         this(context, attrs, 0);
     }
 
-    public NavigationView(Context context, AttributeSet attrs, int defStyleAttr) {
+    public StatusView(Context context, AttributeSet attrs, int defStyleAttr) {
         super(context, attrs, defStyleAttr);
     }
 
     @Override
     protected void onMeasure(int widthMeasureSpec, int heightMeasureSpec) {
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
-            setMeasuredDimension(MeasureSpec.getSize(widthMeasureSpec), sNavigationBarHeight);
+            setMeasuredDimension(MeasureSpec.getSize(widthMeasureSpec), sStatusBarHeight);
         } else {
             setMeasuredDimension(0, 0);
             setVisibility(View.GONE);
